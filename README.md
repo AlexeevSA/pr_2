@@ -1,16 +1,33 @@
-# pr_2
+# Практическая работа №2
 
-A new Flutter project.
+## Тема: Создание базы данных!
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+### Цель работы: необходимо реализовать класс, который отвечает за базу данных и реализовать функции инициализации базы данных на всех платформах, создания, обновления, заполнения таблиц и удаления базы данных.  
 
-A few resources to get you started if this is your first Flutter project:
+### Ход работы:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![Инициализация базы данных для всех платформ](https://user-images.githubusercontent.com/114491231/203909575-c01617a5-dbef-4696-825a-7f83f02f0601.png)
+Инициализация базы данных для всех платформ
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Класс хранящий процедуры создания базы данных](https://user-images.githubusercontent.com/114491231/203909662-dd4fe1b3-6d7e-4664-a5cd-ec07d96697b7.png)
+Класс хранящий процедуры создания базы данных
+
+![Метод создания и обновление базы данных](https://user-images.githubusercontent.com/114491231/203909740-981642ed-f438-41e3-a56a-0f29d620cd92.png)
+Метод создания и обновление базы данных
+
+![Метод инициализации первичных данных в необходимые таблицы](https://user-images.githubusercontent.com/114491231/203909817-524d8b6f-65c7-4651-97dc-21904db789be.png)
+Метод инициализации первичных данных в необходимые таблицы
+
+![Метод удаления базы данных](https://user-images.githubusercontent.com/114491231/203909912-fc127c3b-31fd-47c8-af07-c3b4b1a0047e.png)
+Метод удаления базы данных
+
+![Пример модели](https://user-images.githubusercontent.com/114491231/203909980-5d808785-0ef4-4d0d-9e31-03e7c44df907.png)
+Пример модели
+
+![Пример модели](https://user-images.githubusercontent.com/114491231/203910081-5ef4ff85-71b5-4604-821b-c84cbe6e7b9a.png)
+Пример модели
+
+
+Вывод: реализовали класс, который отвечает за базу данных и реализовали функции инициализации базы данных на всех платформах, создания, обновления, заполнения таблиц и удаления базы данных. 
+
