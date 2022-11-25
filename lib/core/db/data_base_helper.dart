@@ -16,7 +16,7 @@ class DataBaseHelper {
 
   DataBaseHelper._instance();
 
-  final int _version = 1;
+  final int _version = 5;
   late final String _pathDB;
   late final Directory _appDocumentDirectory;
   late final Database database;
@@ -66,7 +66,7 @@ class DataBaseHelper {
   Future<void> onUpgradeTable(Database db) async{
     var tables = await db.rawQuery('select name from sqlite_master');
 
-    for (var table in DatabaseRequest.tableList.reversed){
+    for (var table in DatabaseRequest.tableList){
       if(tables.where((element) => element['name'] == table).isNotEmpty){
         db.execute(DatabaseRequest.deleteTable(table));
       }
@@ -89,12 +89,19 @@ class DataBaseHelper {
       for(var element in GenderEnum.values) {
         db.insert(
           DatabaseRequest.tableGender, 
-          Gender(name: element.name).toMap()
+          Gender(gendername: element.gendername).toMap()
         );
       }
 
       db.insert(DatabaseRequest.tableUsers,
-        User(firstname:'admin',middlename:'admin',lastname:'admin',login: 'admin', password: 'admin', idRole: RoleEnum.admin, idGender: GenderEnum.spiderman).toMap());
+        User(
+          firstname:'admin',
+          middlename:'admin',
+          lastname:'admin',
+          login: 'admin', 
+          password: 'admin', 
+          idRole: RoleEnum.admin, 
+          idGender: GenderEnum.man).toMap());
     }
     on DatabaseException catch(error)
     {

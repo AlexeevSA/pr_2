@@ -9,7 +9,7 @@ class RoleEntity {
 
 enum RoleEnum{
   admin(id: 1, name: 'Администратор'),
-  user(id: 1, name: 'Пользователь');
+  user(id: 2, name: 'Пользователь');
   const RoleEnum({
     required this.id,
     required this.name,

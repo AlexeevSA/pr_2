@@ -76,13 +76,18 @@ static const List<String> tableList = [
         "role" TEXT NOT NULL UNIQUE,
         PRIMARY KEY("id_role" AUTOINCREMENT)
       )''';
-
+  /// Запрос для создания таблицы Gender
+  static const String _createTableGender = '''CREATE TABLE "$tableGender" (
+        "id_gender" INTEGER,
+        "gender" TEXT NOT NULL UNIQUE,
+        PRIMARY KEY("id_gender" AUTOINCREMENT)
+      )''';
   /// Запрос для создания таблицы Users
   static const String _createTableUsers = '''CREATE TABLE "$tableUsers" (
         "id_user"  INTEGER,
-        "fistname"  TEXT NOT NULL,
+        "firstname"  TEXT NOT NULL,
         "middlename"  TEXT NOT NULL,
-        "lasname"  TEXT NOT NULL,
+        "lastname"  TEXT NOT NULL,
         "login"  TEXT NOT NULL UNIQUE,
         "password"  TEXT NOT NULL,
         "role_id"  INTEGER,
@@ -90,13 +95,6 @@ static const List<String> tableList = [
         FOREIGN KEY("role_id") REFERENCES "Role"("id_role") ON DELETE CASCADE,
         FOREIGN KEY("gender_id") REFERENCES "Gender"("id_gender") ON DELETE CASCADE,
         PRIMARY KEY("id_user" AUTOINCREMENT)
-      )''';
-
-  /// Запрос для создания таблицы Gender
-  static const String _createTableGender = '''CREATE TABLE "$tableGender" (
-        "id_gender" INTEGER,
-        "gender" TEXT NOT NULL UNIQUE,
-        PRIMARY KEY("id_gender" AUTOINCREMENT)
       )''';
   /// Запрос для создания таблицы Country
   static const String _createTableCountry = '''CREATE TABLE "$tableCountry" (

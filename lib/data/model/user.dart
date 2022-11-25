@@ -22,8 +22,8 @@ class User extends UserEntity {
       'middlename': middlename,
       'login': login,
       'password':password,
-      'id_gender': idGender,
-      'id_role':idRole.id,
+      'gender_id': idGender.id,
+      'role_id':idRole.id,
     };
   }
 
